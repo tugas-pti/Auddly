@@ -1,0 +1,21 @@
+<div class="container pt-3 pb-2">
+    <h3>DAFTAR USERS</h3>
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">KODE</th>
+                <th scope="col">NAMA</th>
+                <th scope="col">FAKULTAS</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="fasilitas != null">
+            <tr *ngFor="let siswa of fasilitas.result.fasilitas" routerLink="./{{siswa.kode}}">
+                <th scope="row">{{siswa.id}}</th>
+                <td>{{siswa.kode}}</td>
+                <td>{{siswa.nama}}</td>
+                <td>{{siswa.fakultas}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
